@@ -1,0 +1,44 @@
+html 
+link(href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet")
+style 
+    include style.css
+title= 'Manager-Task'
+div(class="containerCustom")
+    div(class="Body addInBox")
+        a(href='/deadlines')
+            button(style='float: right; padding: 0%; width: 7%; height: 7%' class='btn btn-light') 
+                h4 &#10799;
+        form(method='POST' action='/task-add')
+            table(class="list2")
+                tr
+                    td(style="border: none;")
+                        label Task Name
+                    td
+                        input(type='text' name='title' placeholder='Title' required)
+                tr
+                    td(style="border: none;")
+                        label Description
+                    td
+                        textarea(placeholder='Description' name='description' rows="10" cols="30" required)
+                tr
+                    td(style="border: none;")
+                        label Deadline
+                    td
+                        input(type='date' name='date' value="2021-08-20" required)
+                tr
+                    td(style="border: none;")
+                        label Repeat Period in Days
+                    td
+                        input(type='number' name='repeatPeriod' value="0" required)
+                tr
+                    td(style="border: none;")
+                        label Priority Status
+                    td
+                        input(type="range" name="priority" min="1" max="5") 
+                tr
+                    td(style="border: none;")
+                    td
+                        input(value='Add' type='submit' class='btn btn-success separated' style='float: right; margin-left: 0%')
+                    
+    

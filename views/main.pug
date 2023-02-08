@@ -1,0 +1,93 @@
+html
+link(href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet")
+link(href="https:getbootstrap/docs/5.0/components/card/")
+style 
+    include style.css 
+title= 'Manager-Task [' + user.username + ']'
+body
+    div(class="containerCustom")
+        H1(style="text-align: center")='Hello ' + user.username + '.'
+        a(href="/logout")
+                    button(type="button" value="submit" class="btn btn-danger") Logout
+        br
+        br
+        div(class="Body")
+            table(class="header noBreak")   
+                tr
+                    td(class="colLeft")
+                        a(href='deadlines') 
+                            button(class='btn btn-secondary') Sort By Deadline
+                        a(href='priorities')
+                            button(class='btn btn-secondary separated2') Sort By Priority
+                        a(href='task-add/')
+                            button(class='btn btn-success separated2') Add A Task
+                    td(style="width: 10%")
+                    td(style="width: 36%")
+                        table
+                            tr    
+                                form(method="GET" class="searchbar" action="/search" name='formname')
+                                    td
+                                        input(class='separated' name="search" type="search" placeholder='Search' onkeypress="return ((event.charCode > 64 && event.charCode<91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 8 || event.charCode == 32 || (event.charCode >= 48 && event.charCode <= 57));" required)
+                                    td
+                                        button(type="submit" style='margin-left: 10px' class='btn btn-secondary') &#128269;
+                                td
+                                    a(href="/deadlines" style="display: inline;")
+                                        button(type="submit" style='height: 7%' class='btn btn-secondary') Clear Search
+            div(class="list table-wrapper-scroll-y my-custom-scrollbar")
+                table(class="list noBreak")
+                    thead
+                        tr
+                            td(class="colLeft"  style="border-left:none; width: 70%")
+                                h5 Task Name
+                            td(style="width: 10%")
+                                h5 Deadline
+                            td(style="width: 10%")
+                                h5 Priority
+                                div(style="background-color: #ffd4d4;" class="legend") 1
+                                div(style="background-color: #ffc1c1;" class="legend") 2
+                                div(style="background-color: #ff7c7c;" class="legend") 3
+                                div(style="background-color: #ff4646;" class="legend") 4
+                                div(style="background-color: #ff0000;" class="legend") 5
+                            td(style="width: 10%; border-right: none;")
+                                h5 Options
+                    tbody
+                        if Data != undefined && Data.length > 0
+                            each val,key in Data 
+                                tr(scope="row")
+                                    td(class="colLeft" style="border-left:none; width: 70% ; text-align: left")
+                                        details.
+                                            #[summary=val.title]
+                                            #[h5="Description:"]
+                                            #[p=val.description]
+                                    td(style="width: 10%; line-height: 0")
+                                        p=val.date
+                                        p=val.overdue
+                                    if val.priority == "1"
+                                        td.one.priority
+                                    else if val.priority == "2"
+                                        td.two.priority
+                                    else if val.priority == "3"
+                                        td.three.priority
+                                    else if val.priority == "4"
+                                        td.four.priority
+                                    else
+                                        td.five.priority
+                                    td(style="width: 10%; border-right: none")
+                                        a(href='delete/' + val._id)
+                                            button(class='btn btn-light option') &#128465;
+                                        a(href='task-edit/' + val._id)
+                                            button(class='btn btn-light option') &#128393;
+                        else
+                            if Noresults == true
+                                table(class="list")
+                                    tr
+                                        td(style="border: none; border-top: solid 1px")
+                                            h5 No Results
+                            else
+                                table(class="list")
+                                    tr
+                                        td(style="border: none; border-top: solid 1px")
+                                            h5 No Tasks Added Yet
+                        
+                            

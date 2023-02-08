@@ -1,0 +1,152 @@
+* {
+    word-break: normal;
+    box-sizing: border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .containerCustom{
+    background-color: rgba(255, 198, 133, 0.527);
+    height: 100%;
+    padding: 1%;
+    text-align: center;
+  }
+  label{
+    padding: 12px, 12px, 12px, 0px;
+    width: 25%;
+    min-width: 150px;
+    word-break: break-word;
+  }
+  .Body{
+    align-self: center; 
+    background-color: white;
+    margin-left: 5%; 
+    margin-right: 5%;
+    border-radius: 20px;
+  }
+  .list td{
+    border-left: solid 1px;
+    border-right: solid 1px;;
+    border-color: rgb(0, 0, 0);
+  }
+  .list{
+    text-align: center;
+    border-collapse: collapse;
+    border-color: rgb(63, 63, 63);
+    width: 100%;
+  }
+  .list2{
+    text-align: center;
+    border-collapse: collapse;
+    border-color: rgb(63, 63, 63);
+    width: 100%;
+  }
+  .list2 td{
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+    border-left: solid 1px;
+  }
+  .list tr{
+    height: 50px;;
+  }
+  div{
+    border-radius: 5px;
+  }
+  .legend{
+    width: 15%;
+    height: 5%;
+    padding: 1%;
+    display: inline-block;
+    font-size: 1.1vw;
+  }
+  .one{
+    background-color: #ffd4d4;
+  }
+  .two{
+    background-color: #ffc1c1;
+  }
+  .three{
+    background-color: #ff7c7c;
+  }
+  .four{
+    background-color: #ff4646;
+  }
+  .five{
+    background-color: #ff0000;
+  }
+  .priority{
+    border-top: solid 1px;
+    width: 10%
+  }
+  summary{
+    font-size: 23px;
+  }
+  body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/078/291/large_2x/crumpled-paper-background-free-photo.jpg');
+  }
+  button{
+    color: white;
+  }
+  .logInBox{
+   text-align: left;
+   padding: 2%;
+   width: 30%;
+   margin:auto;
+  }
+  .addInBox{
+    text-align: left;
+    padding: 2%;
+    width: 40%;
+    margin:auto;
+   }
+  .header{
+  text-align: left;
+  border-bottom: solid 1px;
+  width: 100%;
+  height: 52px;
+  }
+  .header td{
+  border-right: none; 
+  border-left: none;
+  }
+  .separated{
+   margin-left: 5%;
+  }
+  .separated2{
+    margin-left: 1%;
+  }
+  .colLeft{
+    padding-left: 3%; 
+    width: 54%; 
+    border-left: none;
+  }
+  .searchbar{
+   margin-top: 1%;
+   margin-bottom: 1%;
+   display: inline;
+  }
+  .my-custom-scrollbar {
+     position: relative;
+     height: 350px;
+     overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+    display: block;
+  }
+  .noBreak{
+    word-break: none;
+  }
+  .option{
+    width: 40%;
+    height: 30%;
+    padding: 0px;
+    font-size: 2.4vw;
+  }
+  .btn-light{
+    background-color: white;
+    border-color: white;
+  }
+  .btn-light:hover{
+    background-color: rgb(206, 206, 206);
+  }
+ 
