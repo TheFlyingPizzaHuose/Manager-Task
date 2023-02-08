@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  background-color: rgb(185, 185, 185);
+}
+
+.label{
+  padding-left: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 25%;
+  min-width: 150px;
+}
+
+input[type=submit]{
+  background-color: green;
+  float: right;
+}
+
+input[type=reset]{
+  background-color: red;
+  float: right;
+}
+
+input[type=reset]:hover{
+  background-color: blue;
+}
+
+input[type=submit]:hover{
+  background-color: blue;
+}
+
+.Note{
+  align-self: center; 
+  background-color: rgb(89, 166, 185); 
+  padding: 1%; 
+  margin-left: 25%; 
+  margin-right: 25%;
+  margin-bottom: 2%;
+}
